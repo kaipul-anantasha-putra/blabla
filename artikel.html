@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1c3d">
+  <title>Panduan Baterai pada Perangkat Laptop</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0b1c3d;
+      --navy-light: #142b54;
+      --blue: #315eb5;
+      --paper: #fff;
+      --ink: #1c2738;
+      --muted: #64748b;
+      --line: #e5eaf1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f1f4f8;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .site-header {
+      background: var(--navy);
+      color: white;
+    }
+
+    .header-inner {
+      display: flex;
+      width: min(1120px, calc(100% - 48px));
+      min-height: 76px;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: white;
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: .02em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .36);
+      border-radius: 9px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .header-label {
+      color: #b7c8e7;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 55px 24px 96px;
+      background:
+        radial-gradient(ellipse at 75% 0%, rgba(87, 125, 196, .28), transparent 38%),
+        var(--navy);
+      color: white;
+    }
+
+    .hero-inner {
+      width: min(820px, 100%);
+      margin: auto;
+    }
+
+    .category {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 6px 10px;
+      border: 1px solid rgba(191, 212, 247, .32);
+      border-radius: 999px;
+      color: #d3e2ff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 750;
+      letter-spacing: -.045em;
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+      margin: 18px 0 0;
+      color: #c4d0e4;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+      color: #c4d0e4;
+      font-size: 12px;
+    }
+
+    .meta-dot { color: #8299be; }
+
+    main {
+      position: relative;
+      width: min(820px, calc(100% - 40px));
+      margin: -48px auto 64px;
+    }
+
+    article {
+      padding: clamp(26px, 6vw, 64px);
+      border: 1px solid rgba(11, 28, 61, .07);
+      border-radius: 14px;
+      background: var(--paper);
+      box-shadow: 0 18px 55px rgba(13, 30, 59, .1);
+    }
+
+    .article-body {
+      max-width: 680px;
+      margin: auto;
+      color: #344154;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .article-body p { margin: 0 0 24px; }
+
+    .article-body h2 {
+      margin: 40px 0 13px;
+      color: var(--navy);
+      font-size: clamp(21px, 3vw, 26px);
+      font-weight: 750;
+      letter-spacing: -.025em;
+      line-height: 1.3;
+    }
+
+    .article-body h2::before {
+      display: inline-block;
+      width: 4px;
+      height: 1em;
+      margin: 0 12px -2px 0;
+      border-radius: 4px;
+      background: var(--blue);
+      content: "";
+    }
+
+    .article-body ul {
+      display: grid;
+      gap: 11px;
+      margin: 0 0 28px;
+      padding-left: 24px;
+    }
+
+    .article-body li { padding-left: 4px; }
+    .article-body li::marker { color: var(--blue); }
+
+    .site-footer {
+      padding: 24px;
+      background: var(--navy);
+      color: #c4d0e4;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .site-footer p { margin: 0; }
+
+    @media (max-width: 600px) {
+      .header-inner { width: calc(100% - 36px); min-height: 66px; }
+      .header-label { font-size: 10px; }
+      .hero { padding: 42px 20px 82px; }
+      main { width: calc(100% - 24px); margin-top: -40px; }
+      article { padding: 27px 22px; border-radius: 11px; }
+      .article-body { font-size: 16px; line-height: 1.82; }
+      .article-body h2 { margin-top: 33px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Ruang Teknologi, beranda">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>RUANG TEKNOLOGI</span>
+      </a>
+      <span class="header-label">Wawasan digital</span>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="article-title">
+    <div class="hero-inner">
+      <p class="category">Panduan Baterai Laptop</p>
+      <h1 id="article-title">JANGAN ASAL CHARGE! Ternyata Begini Cara Kerja Baterai Laptop di Balik Layar</h1>
+      <p class="hero-subtitle">Kenali fungsi dan jenis baterai laptop, cara mengisi daya yang aman, alasan kompatibilitas itu penting, dan apa risikonya jika baterai diabaikan.</p>
+      <div class="article-meta">
+        <span>Oleh Tim Ruang Teknologi</span>
+        <span class="meta-dot" aria-hidden="true">·</span>
+        <time datetime="2024">2024</time>
+        <span class="meta-dot" aria-hidden="true">·</span>
+        <span>8 menit membaca</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <article>
+      <div class="article-body">
+        <p>Baterai adalah sumber energi portabel yang membuat laptop tetap bekerja saat tidak tersambung ke stopkontak. Namun, baterai bukan sekadar “tabung daya”: jenis sel, rangkaian pengaman, perangkat lunak, adaptor, dan suhu semuanya berperan. Karena itu, asal cocok colok belum tentu berarti charger atau baterainya sesuai.</p>
+
+        <h2>Apa Fungsi Baterai dan Bagaimana Cara Kerjanya?</h2>
+        <p>Baterai menyimpan energi listrik dalam bentuk kimia, lalu melepaskannya sebagai listrik untuk menjalankan prosesor, layar, penyimpanan, dan komponen lain. Pada baterai lithium-ion, ion bergerak di antara elektroda melalui elektrolit saat baterai diisi dan digunakan. Proses ini berulang, tetapi kapasitas sel akan berkurang secara bertahap seiring usia, siklus pemakaian, dan kondisi seperti panas.</p>
+        <p>Di balik layar, <em>battery management system</em> (BMS) memantau hal-hal seperti tegangan, arus, suhu, dan tingkat muatan. Pengendali pengisian di laptop dan adaptor mengatur daya yang masuk—umumnya dengan arus konstan pada tahap awal, lalu tegangan konstan saat mendekati penuh. Mekanisme ini membantu pengisian berlangsung terkendali; baterai tidak semestinya dipaksa menerima daya tanpa batas.</p>
+        <p>Angka persentase di layar hanyalah perkiraan tingkat muatan, bukan pengukuran kapasitas yang selalu sempurna. Itulah sebabnya persentase dapat berubah lebih cepat pada beberapa rentang, atau laptop mati sebelum indikator tepat menunjukkan nol.</p>
+
+        <h2>Jenis Baterai Laptop: Kimia dan Bentuknya</h2>
+        <p>Kebanyakan laptop modern menggunakan baterai isi ulang berbasis lithium. Istilah “lithium-ion” dan “lithium-polymer” sering dipakai untuk menggambarkan baterai dengan rancangan sel yang berbeda; lithium-polymer biasanya merujuk pada rancangan sel berkemasan fleksibel, bukan jaminan bahwa kimianya sepenuhnya berbeda. Nama dagang dan rincian kimia dapat bervariasi, jadi spesifikasi pabrikan adalah rujukan terbaik.</p>
+        <ul>
+          <li><strong>Lithium-ion:</strong> umum digunakan, memiliki kepadatan energi tinggi, dan tersedia dalam berbagai format sel. Kualitasnya bergantung pada rancangan dan sistem pengaman baterai.</li>
+          <li><strong>Lithium-polymer:</strong> dapat dibuat dalam bentuk tipis atau sesuai ruang perangkat. Bentuknya fleksibel bagi desain laptop, tetapi tetap perlu perlindungan dari panas, kerusakan, dan pengisian yang tidak sesuai.</li>
+          <li><strong>Baterai tanam dan lepas-pasang:</strong> ini adalah perbedaan bentuk pemasangan, bukan jenis kimia. Baterai tanam membantu membuat perangkat lebih tipis, sedangkan baterai lepas-pasang lebih mudah diganti pengguna jika memang dirancang untuk itu.</li>
+        </ul>
+        <p>Baterai berbasis nikel, seperti NiMH, pernah digunakan pada laptop lama tetapi kini jauh lebih jarang. Baterai-baterai tersebut memiliki karakteristik pengisian dan perawatan berbeda, sehingga panduan untuk baterai lithium tidak boleh diterapkan begitu saja pada perangkat lama.</p>
+
+        <h2>Kelebihan dan Kekurangannya</h2>
+        <p><strong>Kelebihan:</strong> baterai lithium umumnya menyimpan banyak energi dalam ukuran dan bobot relatif kecil, dapat diisi ulang, dan tidak mengharuskan pengguna menunggu baterai habis sebelum mengisi kembali. Baterai tanam juga memungkinkan rancangan laptop yang lebih tipis.</p>
+        <p><strong>Kekurangan:</strong> kapasitas menurun seiring usia dan siklus penggunaan; panas atau penyimpanan lama pada tingkat muatan tinggi dapat mempercepat penuaan. Baterai juga merupakan komponen habis pakai yang pada akhirnya mungkin perlu diganti, dan baterai tanam biasanya memerlukan teknisi untuk penggantian yang aman.</p>
+
+        <h2>Mengapa Baterai dan Charger Harus Kompatibel?</h2>
+        <p>Baterai pengganti harus cocok dengan model laptop yang tepat, bukan sekadar terlihat pas atau memiliki kapasitas yang mirip. Produsen dapat menggunakan bentuk fisik, susunan sel, tegangan, konektor, komunikasi BMS, sensor suhu, dan firmware yang berbeda. Baterai yang tidak dikenali dapat gagal mengisi, menampilkan persentase keliru, membuat laptop tidak stabil, atau meniadakan perlindungan yang dirancang untuk perangkat tersebut.</p>
+        <p>Hal serupa berlaku untuk charger. Periksa model yang didukung serta spesifikasi tegangan, arus atau daya, polaritas dan konektor. Pada USB-C, laptop dan adaptor juga harus mendukung profil USB Power Delivery yang sesuai. Adaptor berdaya lebih rendah mungkin mengisi lambat atau tidak mampu mengisi sambil laptop bekerja berat; dukungan pengisian dapat berbeda antarperangkat. Jangan mengandalkan bentuk konektor saja—ikuti panduan produsen laptop.</p>
+        <p>Gunakan baterai pengganti resmi atau dari pemasok tepercaya yang secara jelas menyebutkan kompatibilitas model. Hindari baterai tanpa identitas, spesifikasi, atau perlindungan yang dapat diverifikasi. Harga murah tidak sepadan dengan risiko kerusakan perangkat maupun bahaya keselamatan.</p>
+
+        <h2>Prosedur Perawatan yang Aman</h2>
+        <ul>
+          <li><strong>Gunakan charger yang sesuai.</strong> Cocokkan model dan spesifikasi dengan panduan laptop. Periksa kabel dan konektor; hentikan pemakaian bila ada bagian terkelupas, bengkok, atau rusak.</li>
+          <li><strong>Kurangi panas.</strong> Gunakan laptop di permukaan keras dan datar, jangan menutup ventilasi, bersihkan debu sesuai panduan perangkat, dan hindari meninggalkannya di tempat sangat panas seperti mobil tertutup.</li>
+          <li><strong>Isi daya secara wajar.</strong> Tidak perlu sengaja menghabiskan baterai hingga 0% sebelum mengisi. Pengisian sebagian umumnya tidak masalah untuk baterai lithium. Tidak perlu panik jika sesekali terisi 100%, tetapi bila laptop terus tersambung ke daya, gunakan fitur batas pengisian atau mode kesehatan baterai jika tersedia.</li>
+          <li><strong>Untuk penggunaan atau penyimpanan jangka panjang,</strong> ikuti instruksi pabrikan. Banyak produsen menyarankan baterai disimpan dengan muatan sebagian di tempat sejuk dan kering, bukan kosong total atau penuh untuk waktu lama; tingkat yang tepat dapat berbeda menurut perangkat.</li>
+          <li><strong>Pantau kesehatan baterai.</strong> Gunakan diagnostik bawaan atau aplikasi resmi produsen. Jika daya tahan menurun tajam, persentase melonjak, laptop sering mati mendadak, atau pengisian tidak normal, periksa ke layanan resmi.</li>
+          <li><strong>Jangan membongkar atau menusuk baterai.</strong> Baterai tanam dan baterai yang rusak sebaiknya ditangani teknisi. Jangan membuang baterai ke sampah rumah tangga; serahkan ke fasilitas daur ulang atau pengumpulan baterai yang sesuai.</li>
+        </ul>
+
+        <h2>Akibat Jika Perawatan Diabaikan</h2>
+        <p>Debu yang menutup ventilasi dan pemakaian dalam suhu tinggi dapat membuat laptop lebih panas dan mempercepat turunnya kapasitas baterai. Akibat yang lebih umum adalah waktu penggunaan makin singkat, laptop lebih sering perlu diisi, atau perangkat mati sebelum pekerjaan tersimpan. Charger atau baterai yang tidak cocok dapat menyebabkan pengisian gagal, kinerja terbatas, pesan kesalahan, hingga kerusakan pada perangkat.</p>
+        <p>Dalam kasus yang jarang tetapi serius, baterai yang rusak atau cacat dapat menggembung, bocor, mengeluarkan bau, atau menjadi sangat panas. Jika baterai menggembung, casing terangkat, atau muncul asap/bau menyengat, matikan perangkat bila aman, cabut adaptor tanpa menyentuh baterai yang rusak, jauhkan dari bahan mudah terbakar, dan hubungi teknisi atau layanan darurat setempat jika ada asap atau api. Jangan menekan, menusuk, atau mencoba melepas baterai tanam yang menggembung.</p>
+        <p>Intinya: baterai memang menua, tetapi kebiasaan sederhana membantu menjaganya tetap aman dan berguna lebih lama. Pilih charger dan baterai yang benar-benar kompatibel, kendalikan panas, dan ikuti panduan untuk model laptop Anda—bukan mitos pengisian yang berlaku untuk semua perangkat.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Ruang Teknologi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
